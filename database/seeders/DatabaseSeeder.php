@@ -32,5 +32,11 @@ public function run(): void
             "password" => bcrypt("admin"),
 
         ]);
+
+        User::create([
+            "name" => "asep",
+            "email" => "asep@gmail.com",
+            "password" => bcrypt("admin")
+        ]);
     }
 }

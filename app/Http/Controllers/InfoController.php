@@ -43,7 +43,7 @@ class InfoController extends Controller
             $uangUser =  $request->keterangan_pembayaran;
             $uangBayar = 10;
             $kembalian = $uangUser - $uangBayar;
-            $user->keterangan_pembayaran = true;
+            $user->keterangan_pembayaran = true; 
             $user->save();
             if($uangUser == $uangBayar){
                 $kembalianUang = "Pembayaran Berhasil";
