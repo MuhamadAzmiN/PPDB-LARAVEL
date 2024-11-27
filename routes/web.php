@@ -32,7 +32,8 @@ Route::get('/pembayaran', function (){
   return redirect('/info');
 });
 
-Route::post('/pembayaran', [\App\Http\Controllers\InfoController::class, 'pembayaran'])->name('pembayaran');
+
+Route::post('/pembayaran', [\App\Http\Controllers\InfoController::class, 'pembayaran'])->name('pembayaran')->middleware('auth');
 require __DIR__.'/auth.php';
 
 // routes/web.php
@@ -48,6 +49,11 @@ Route::middleware(['admin'])->group(function (){
     Route::get('/item/{id}', [\App\Http\Controllers\UserDaftarController::class, 'detail'])->name('item.detail');
     Route::delete('UserDelete/{id}', [\App\Http\Controllers\UserDaftarController::class, 'destroy'])->name('user.delete');
 });
+
+
+
+
+
 
 
 

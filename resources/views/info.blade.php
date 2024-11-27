@@ -56,7 +56,8 @@
                         </svg>
                         <span class="sr-only">Info</span>
                         <div>
-                            <span class="font-medium">Informasi ! Halo {{ auth()->user()->name }} Hasil PPDB Anda Sudah bisa Dicek Ya</span>
+                            <span class="font-medium">Informasi: Halo {{ auth()->user()->name }}, hasil PPDB Anda sudah dapat diperiksa.</span>
+
                         </div>
                     </div>
                  @endif
@@ -202,6 +203,7 @@
                         />
                     </svg>
                 </li>
+            
 
                 <li class="flex items-center justify-end sm:gap-1.5">
                     <span class="hidden sm:inline"> Payment </span>
@@ -229,9 +231,10 @@
 
         $userLulus = auth()->user()->keterangan_keterima;
 
-         @endphp
+        @endphp
+
         @if(auth()->user()->keterangan_pembayaran == true)
-    <section class="bg-white dark:bg-gray-900">
+        <section class="bg-white dark:bg-gray-900">
         <div class="container px-6 py-10 mx-auto">
             <div class="text-center">
                 <div class="flex items-center justify-center mb-4">
@@ -249,8 +252,9 @@
             
                     @php
                         $keteranganKeterima = auth()->user()->keterangan_keterima;
+                
                     @endphp
-                    @if($keteranganKeterima === true)
+                    @if($keteranganKeterima == true)
                         <div class="relative z-10 w-full rounded-md h-96 bg-green-500 flex justify-center items-center">
                             <div class="flex flex-col md:flex-row items-center text-center text-white">
                                 <div class="p-4">
@@ -260,7 +264,7 @@
                                 <img src="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/571c2d3473f3fa843f61e92f2dc20b23.png" alt="SMK Wikrama Bogor" class="w-20 md:w-40"> <!-- Ubah ukuran gambar sesuai kebutuhan -->
                             </div>
                         </div>
-                    @elseif($keteranganKeterima === false)
+                    @elseif($keteranganKeterima ==false)
                         <div class="relative z-10 w-full rounded-md h-96 bg-red-500 flex justify-center items-center">
                             <div class="flex flex-col md:flex-row items-center text-center text-white">
                                 <div class="p-4">
