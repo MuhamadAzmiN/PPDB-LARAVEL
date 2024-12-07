@@ -13,6 +13,8 @@ class AdminController extends Controller
         return view('admin.data',[
             "title" => "Data User",
         ]);
+
+        
     }
 
 }

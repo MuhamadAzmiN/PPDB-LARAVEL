@@ -17,20 +17,12 @@ class DaftarController extends Controller
             return redirect('/dashboard')->with('danger', "Anda Harus Login Terlebih Dahulu untuk ke halaman Pendaftaran, Anda Bisa Login disini ");
         }
         $daftar = Daftar::find(1);
-//        $user = User::find(auth()->id());
-//        dd($user->keterangan_daftar);
-    // Contoh: Mendapatkan user dengan ID 1
-
-// Memanggil metode daftar() untuk mendapatkan objek Daftar terkait
-//
         return view('/daftar',[
 
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         //
